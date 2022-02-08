@@ -1,0 +1,21 @@
+
+
+resource "google_storage_bucket" "bucket" {
+  name          = var.gcp.bucket.name
+  location      = "EU"
+  force_destroy = true
+}
+
+resource "google_storage_bucket_object" "avi_controller" {
+  name   = "avi_controller"
+  source = "/home/nic/bin/avi/21.1.1/gcp_controller-21.1.1-9045.tar.gz"
+  bucket = google_storage_bucket.bucket.id
+}
+
+resource "google_compute_image" "avi_controller_image" {
+  name = "avi_controller"
+
+  raw_disk {
+    source = google_storage_bucket_object.avi_controller.self_link
+  }
+}

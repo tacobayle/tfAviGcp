@@ -1,0 +1,23 @@
+data "google_dns_managed_zone" "zone" {
+  name = var.gcp.dnsZoneName
+}
+
+resource "google_dns_record_set" "jump" {
+  name = "jump.${data.google_dns_managed_zone.zone.dns_name}"
+  type = "A"
+  ttl  = 300
+
+  managed_zone = data.google_dns_managed_zone.zone.name
+
+  rrdatas = [google_compute_instance.jump.network_interface[0].access_config[0].nat_ip]
+}
+
+resource "google_dns_record_set" "controller" {
+  name = "controller.${data.google_dns_managed_zone.zone.dns_name}"
+  type = "A"
+  ttl  = 300
+
+  managed_zone = data.google_dns_managed_zone.zone.name
+
+  rrdatas = [google_compute_instance.aviController.network_interface[0].access_config[0].nat_ip]
+}
