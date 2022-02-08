@@ -1,4 +1,4 @@
-# aviGcp
+# tfAviGcp
 
 ## Goals
 Spin up a full Gcp/Avi environment (through Terraform)
@@ -18,6 +18,8 @@ GOOGLE_CLOUD_KEYFILE_JSON=**************
 - GCP Avi Controller image configured in GCP: name of this image should be configured as var.controller.avi_image
 
 ![img.png](img/img.png)
+- SSH Key (public and private) paths defined in var.ssh_key.public and var.ssh_key.private 
+
 
 ## versions:
 
