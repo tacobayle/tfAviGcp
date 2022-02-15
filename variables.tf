@@ -41,7 +41,7 @@ variable "jump" {
     name = "jump"
     type = "e2-medium"
     image = "ubuntu-os-cloud/ubuntu-2004-lts"
-    userdata = "userdata/jump-ubuntu_20.sh"
+    userdata = "userdata/jump.sh"
     avisdkVersion = "21.1.3"
     username = "ubuntu"
   }
@@ -53,10 +53,10 @@ variable "ansible" {
     version = "2.10.7"
     prefixGroup = "gcp"
     gcpServiceAccount = "/home/nic/creds/gcp/projectavi-283209-298e9656bfa5.json"
-    aviPbAbsentUrl = "https://github.com/tacobayle/ansiblePbAviAbsent"
-    aviPbAbsentTag = "v1.53"
-    aviConfigureTag = "v6.08"
-    aviConfigureUrl = "https://github.com/tacobayle/aviConfigure"
+    aviPbAbsentUrl = "https://github.com/tacobayle/ansibleAviClear"
+    aviPbAbsentTag = "v1.02"
+    aviConfigureTag = "v1.00"
+    aviConfigureUrl = "https://github.com/tacobayle/ansibleAviConfig"
   }
 }
 
