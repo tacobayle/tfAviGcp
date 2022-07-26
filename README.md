@@ -16,8 +16,14 @@ export TF_VAR_avi_old_password="*****"
 GOOGLE_CLOUD_KEYFILE_JSON=**************
 ```
 - GCP Avi Controller image configured in GCP: name of this image should be configured as var.controller.avi_image
-
-![img.png](img/img.png)
+![img_2.png](img/img_0.png)
+to do so:
+  - go to cloud storage
+  - create a bucket and upload the file in it:
+![img.png](img/img_1.png)
+  - create an image:
+![img_1.png](img/img_2.png)
+    
 - SSH Key (public and private) paths defined in var.ssh_key.public and var.ssh_key.private 
 
 
@@ -34,7 +40,7 @@ on linux_amd64
 
 ### Avi version
 ```
-Avi 21.1.3 with a standalone controller
+Avi controller-22.1.1-9052 with a standalone controller
 ```
 
 ### GCP Region:
@@ -44,7 +50,7 @@ Avi 21.1.3 with a standalone controller
 
 - All the variables are stored in variables.tf
 
-## Use the the terraform script to:
+## Use terraform to:
 - Create the VPC and subnets with a cloud NAT service for the private subnets
 - Spin up 2 backend servers (second subnet) across the 3 zones - no NAT public IP - apache deployed through userdata
 - Spin up a jump server with ansible in the mgt subnet (first subnet) - NAT Public IP - ansible through userdata
@@ -52,7 +58,7 @@ Avi 21.1.3 with a standalone controller
 - Spin up an Avi controller (in the first subnet) based on the avi image needed as a prerequisite
 - Call ansible to do the configuration (avi) based on dynamic inventory
 
-## Run the terraform:
+## Run terraform:
 ```
 cd ~ ; git clone https://github.com/tacobayle/tfAviGcp ; cd tfAviGcp ; terraform init ; terraform apply -auto-approve
 # the terraform will output the command to destroy the environment.
