@@ -4,7 +4,7 @@ variable "avi_username" {}
 variable "avi_old_password" {}
 
 variable "avi_version" {
-  default = "22.1.1"
+  default = "22.1.2"
 }
 
 variable "subnetworkName" {
@@ -42,7 +42,7 @@ variable "jump" {
     type = "e2-medium"
     image = "ubuntu-os-cloud/ubuntu-2004-lts"
     userdata = "userdata/jump.sh"
-    avisdkVersion = "22.1.1"
+    avisdkVersion = "22.1.2"
     username = "ubuntu"
   }
 }
@@ -75,7 +75,7 @@ variable "backend" {
 variable "controller" {
   default = {
     name = "avi-controller"
-    image_name = "image-avi-22-1-1"
+    image_name = "image-avi-22-1-2"
     type = "e2-standard-8"
     diskName = "avi-controller"
     diskType = "pd-ssd"

@@ -40,7 +40,7 @@ on linux_amd64
 
 ### Avi version
 ```
-Avi controller-22.1.1-9052 with a standalone controller
+Avi controller-22.1.2-9086 with a standalone controller
 ```
 
 ### GCP Region:
