@@ -40,7 +40,7 @@ on linux_amd64
 
 ### Avi version
 ```
-Avi controller-22.1.2-9086 with a standalone controller
+gcp_controller-22.1.3-9096.tar.gz with a standalone controller
 ```
 
 ### GCP Region:
