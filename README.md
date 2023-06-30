@@ -21,6 +21,7 @@ to do so:
   - go to cloud storage
   - create a bucket and upload the file in it:
 ![img.png](img/img_1.png)
+  - go to Compute Engine
   - create an image:
 ![img_1.png](img/img_2.png)
     
@@ -40,7 +41,7 @@ on linux_amd64
 
 ### Avi version
 ```
-gcp_controller-22.1.3-9096.tar.gz with a standalone controller
+gcp_controller-22.1.4-9196.tar.gz with a standalone controller
 ```
 
 ### GCP Region:

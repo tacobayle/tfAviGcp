@@ -4,7 +4,7 @@ variable "avi_username" {}
 variable "avi_old_password" {}
 
 variable "avi_version" {
-  default = "22.1.3"
+  default = "22.1.4"
 }
 
 variable "subnetworkName" {
@@ -29,8 +29,8 @@ variable "sgUdp" {
 
 variable "ssh_key" {
   default = {
-    private = "~/creds/ssh/cloudKey"
-    public = "~/creds/ssh/cloudKey.pub"
+    private = "/opt/creds/ssh/cloudKey"
+    public = "/opt/creds/ssh/cloudKey.pub"
   }
 }
 
@@ -42,7 +42,7 @@ variable "jump" {
     type = "e2-medium"
     image = "ubuntu-os-cloud/ubuntu-2004-lts"
     userdata = "userdata/jump.sh"
-    avisdkVersion = "22.1.3"
+    avisdkVersion = "22.1.4"
     username = "ubuntu"
   }
 }
@@ -52,7 +52,7 @@ variable "ansible" {
   default = {
     version = "2.10.7"
     prefixGroup = "gcp"
-    gcpServiceAccount = "/home/nic/creds/gcp/projectavi-283209-298e9656bfa5.json"
+    gcpServiceAccount = "/opt/creds/gcp/projectavi-283209-298e9656bfa5.json"
     aviPbAbsentUrl = "https://github.com/tacobayle/ansibleAviClear"
     aviPbAbsentTag = "v1.02"
     aviConfigureTag = "v1.00"
@@ -75,7 +75,7 @@ variable "backend" {
 variable "controller" {
   default = {
     name = "avi-controller"
-    image_name = "image-avi-22-1-3"
+    image_name = "image-avi-22-1-4"
     type = "e2-standard-8"
     diskName = "avi-controller"
     diskType = "pd-ssd"
