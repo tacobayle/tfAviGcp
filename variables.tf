@@ -4,7 +4,7 @@ variable "avi_username" {}
 variable "avi_old_password" {}
 
 variable "avi_version" {
-  default = "22.1.4"
+  default = "31.1.1"
 }
 
 variable "subnetworkName" {
@@ -29,8 +29,8 @@ variable "sgUdp" {
 
 variable "ssh_key" {
   default = {
-    private = "/opt/creds/ssh/cloudKey"
-    public = "/opt/creds/ssh/cloudKey.pub"
+    private = "/home/ubuntu/.ssh/id_rsa"
+    public = "/home/ubuntu/.ssh/id_rsa.pub"
   }
 }
 
@@ -42,7 +42,7 @@ variable "jump" {
     type = "e2-medium"
     image = "ubuntu-os-cloud/ubuntu-2004-lts"
     userdata = "userdata/jump.sh"
-    avisdkVersion = "22.1.4"
+    avisdkVersion = "31.1.1"
     username = "ubuntu"
   }
 }
@@ -75,7 +75,7 @@ variable "backend" {
 variable "controller" {
   default = {
     name = "avi-controller"
-    image_name = "image-avi-22-1-4"
+    image_name = "image-avi-31-1-1"
     type = "e2-standard-8"
     diskName = "avi-controller"
     diskType = "pd-ssd"

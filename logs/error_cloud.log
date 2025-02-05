@@ -1,0 +1,12 @@
+resource.foo7: Still creating... [17m50s elapsed]
+null_resource.foo7: Still creating... [18m0s elapsed]
+null_resource.foo7: Still creating... [18m10s elapsed]
+null_resource.foo7: Still creating... [18m20s elapsed]
+null_resource.foo7: Still creating... [18m30s elapsed]
+null_resource.foo7: Still creating... [18m40s elapsed]
+null_resource.foo7 (remote-exec): fatal: [localhost]: FAILED! => {"attempts": 6, "changed": true, "cmd": ["python3", "../python/retrieveCloudStatus.py", "~/.creds.json", "cloud-387e4fc9-2f37-4d1e-a605-2f00a768a2cb"], "delta": "0:00:00.227761", "end": "2024-11-12 20:48:50.009850", "msg": "non-zero return code", "rc": 1, "start": "2024-11-12 20:48:49.782089", "stderr": "Traceback (most recent call last):\n  File \"../python/retrieveCloudStatus.py\", line 1, in <module>\n    from avi.sdk.avi_api import ApiSession\nModuleNotFoundError: No module named 'avi'", "stderr_lines": ["Traceback (most recent call last):", "  File \"../python/retrieveCloudStatus.py\", line 1, in <module>", "    from avi.sdk.avi_api import ApiSession", "ModuleNotFoundError: No module named 'avi'"], "stdout": "", "stdout_lines": []}
+null_resource.foo7 (remote-exec): ...ignoring
+
+null_resource.foo7 (remote-exec): TASK [Modify/Creating SE group - GCP] ******************************************
+null_resource.foo7 (remote-exec): changed: [localhost] => (item=Modifying SE group called Default-Group)
+null_resource.foo7 (remote-exec): changed:
