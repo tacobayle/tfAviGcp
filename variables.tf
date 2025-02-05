@@ -29,8 +29,8 @@ variable "sgUdp" {
 
 variable "ssh_key" {
   default = {
-    private = "/home/ubuntu/.ssh/id_rsa"
-    public = "/home/ubuntu/.ssh/id_rsa.pub"
+    private = "/opt/ssh/id_rsa"
+    public = "/opt/ssh/id_rsa.pub"
   }
 }
 
