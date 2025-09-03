@@ -68,6 +68,11 @@ resource "google_compute_instance" "jump" {
     destination = "/opt/ansible/inventory/${basename(var.ansible.gcpServiceAccount)}"
   }
 
+  provisioner "file" {
+    content = data.template_file.controllerPrivateIp.rendered
+    destination = "/home/${var.jump.username}/controllerPrivateIp.yml"
+  }
+
 //  provisioner "remote-exec" {
 //    inline      = [
 //      "chmod 600 ${var.privateKey}",

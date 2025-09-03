@@ -1,0 +1,2 @@
+controllerPrivateIps: |
+  ["${controllerPrivateIp}"]
