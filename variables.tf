@@ -55,7 +55,7 @@ variable "ansible" {
     gcpServiceAccount = "/tmp/projectavi-283209-298e9656bfa5.json"
     aviPbAbsentUrl = "https://github.com/tacobayle/ansibleAviClear"
     aviPbAbsentTag = "v1.02"
-    aviConfigureTag = "v2.7"
+    aviConfigureTag = "v2.72"
     aviConfigureUrl = "https://github.com/tacobayle/ansibleAviConfig"
   }
 }
@@ -80,16 +80,6 @@ variable "controller" {
     diskName = "avi-controller"
     diskType = "pd-ssd"
     diskSize = "128"
-    environment = "GCP"
-    cluster = false
-    count = "1"
-    dns =  ["8.8.8.8", "8.8.4.4"]
-    ntp = ["95.81.173.155", "188.165.236.162"]
-    floating_ip = "1.1.1.1"
-    from_email = "avicontroller@avidemo.fr"
-    se_in_provider_context = "false"
-    tenant_access_to_provider_se = "true"
-    tenant_vrf = "false"
     aviCredsJsonFile = "~/.creds.json"
   }
 }

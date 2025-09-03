@@ -1,2 +1,11 @@
 controllerPrivateIps: |
   ["${controllerPrivateIp}"]
+controller:
+  cluster: false
+  ntp: |
+    ["95.81.173.155", "188.165.236.162"]
+  dns: |
+    ["8.8.8.8", "8.8.4.4"]
+  environment: GCP
+  floating_ip : "1.1.1.1"
+  aviCredsJsonFile: ${aviCredsJsonFile}

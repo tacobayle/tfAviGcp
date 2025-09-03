@@ -15,6 +15,14 @@ data "template_file" "jump" {
   }
 }
 
+data "template_file" "controllerPrivateIp" {
+  template = file("templates/avi_values.yaml.template")
+  vars = {
+    controllerPrivateIp = google_compute_instance.aviController.network_interface.0.network_ip
+    aviCredsJsonFile = var.controller.aviCredsJsonFile
+  }
+}
+
 resource "google_compute_instance" "jump" {
   name = var.jump.name
   machine_type = var.jump.type
