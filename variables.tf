@@ -289,15 +289,6 @@ variable "gcp" {
               port = 53
             }
           ]
-        },
-        {
-          name = "app5-gslb"
-          services: [
-            {
-              port = 53
-            }
-          ]
-          se_group_ref: "seGroupGslb"
         }
       ]
     }
