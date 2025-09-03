@@ -40,7 +40,7 @@ variable "jump" {
   default = {
     name = "jump"
     type = "e2-medium"
-    image = "ubuntu-os-cloud/ubuntu-2004-lts"
+    image = "ubuntu-os-cloud/ubuntu-2204-lts"
     userdata = "userdata/jump.sh"
     avisdkVersion = "31.1.1"
     username = "ubuntu"
@@ -55,7 +55,7 @@ variable "ansible" {
     gcpServiceAccount = "/opt/creds/gcp/projectavi-283209-298e9656bfa5.json"
     aviPbAbsentUrl = "https://github.com/tacobayle/ansibleAviClear"
     aviPbAbsentTag = "v1.02"
-    aviConfigureTag = "v1.00"
+    aviConfigureTag = "v2.7"
     aviConfigureUrl = "https://github.com/tacobayle/ansibleAviConfig"
   }
 }
@@ -64,7 +64,7 @@ variable "backend" {
   type = map
   default = {
     type = "e2-micro"
-    image = "ubuntu-os-cloud/ubuntu-2004-lts"
+    image = "ubuntu-os-cloud/ubuntu-2204-lts"
     userdata = "userdata/backend.sh"
     count = 2
     url_demovip_server = "https://github.com/tacobayle/demovip_server"
