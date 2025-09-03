@@ -52,7 +52,7 @@ variable "ansible" {
   default = {
     version = "2.10.7"
     prefixGroup = "gcp"
-    gcpServiceAccount = "/opt/creds/gcp/projectavi-283209-298e9656bfa5.json"
+    gcpServiceAccount = "/tmp/projectavi-283209-298e9656bfa5.json"
     aviPbAbsentUrl = "https://github.com/tacobayle/ansibleAviClear"
     aviPbAbsentTag = "v1.02"
     aviConfigureTag = "v2.7"
