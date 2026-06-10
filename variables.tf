@@ -55,7 +55,7 @@ variable "ansible" {
     gcpServiceAccount = "/tmp/projectavi-283209-298e9656bfa5.json"
     aviPbAbsentUrl = "https://github.com/tacobayle/ansibleAviClear"
     aviPbAbsentTag = "v1.02"
-    aviConfigureTag = "v2.85"
+    aviConfigureTag = "v2.87"
     aviConfigureUrl = "https://github.com/tacobayle/ansibleAviConfig"
   }
 }
