@@ -2,12 +2,14 @@
 sudo apt-get update
 sudo apt install -y python3-pip
 sudo apt install -y jq
+pip3 install --upgrade pyOpenSSL
 pip3 install ansible==${ansibleVersion}
 pip3 install avisdk==${avisdkVersion}
 pip3 install dnspython
 pip3 install netaddr
 pip3 install google-auth
 pip3 install requests
+pip3 install --upgrade pyopenssl cryptography
 sudo -u ${username} ansible-galaxy collection install vmware.alb
 sudo -u ubuntu mkdir -p /home/${username}/.ssh
 sudo mkdir -p /opt/ansible/inventory
